@@ -1,0 +1,15 @@
+body{
+    height: 100vh;
+    background-image: url('../img/janko-ferlic-sfL_QOnmy00-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+main{
+    padding: 1%;
+}
+h1{
+    text-align: center;
+    background: rgba(256, 256, 256, 0.6);
+    border-radius: 25px;
+}

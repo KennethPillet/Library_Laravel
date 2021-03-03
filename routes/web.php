@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NavController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-Route::get('/home', function () {
+/*Route::get('/home', function () {
     return view('home');
 });
 Route::get('/list', function () {
@@ -25,3 +23,8 @@ Route::get('/list', function () {
 Route::get('/add', function () {
     return view('add');
 });
+*/
+
+Route::get('/', [NavController::class,'home']);
+Route::get('/list', [NavController::class,'list']);
+Route::get('/add', [NavController::class,'add']);
