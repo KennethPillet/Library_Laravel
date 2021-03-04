@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+/* use Illuminate\Http\Request; */
 
 class NavController extends Controller
 {
@@ -10,9 +10,10 @@ class NavController extends Controller
         return view('home');
     }
     public function list(){
-        return view('list');
+        return view('list', ['name' => 'Kenneth']);
     }
     public function add(){
         return view('add');
     }
+    
 }

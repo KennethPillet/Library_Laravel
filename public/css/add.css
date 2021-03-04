@@ -13,3 +13,6 @@ h1{
     background: rgba(256, 256, 256, 0.6);
     border-radius: 25px;
 }
+form label{
+    color: whitesmoke;
+}
