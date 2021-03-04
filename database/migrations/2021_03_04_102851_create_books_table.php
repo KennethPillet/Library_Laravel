@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCategoriesTable extends Migration
+class CreateBooksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,15 @@ class CreateCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('categories', function (Blueprint $table) {
+        Schema::create('books', function (Blueprint $table) {
             $table->id();
+            $table->string('title',255); // Création d'un champ texte 'titre' de 255 caractères
             $table->string('author');// Création d'un champ texte 'author'
             $table->longText('description'); // Création d'un champ texte long 'contenu'
-            $table->string('publication_year');
             $table->string('genre');
-            $table->string('title',255); // Création d'un champ texte 'titre' de 255 caractères
-            $table->string('pages_nb');
+            $table->integer('publication_year');
+            $table->integer('pages_nb');
+            $table->timestamps();
         });
     }
 
