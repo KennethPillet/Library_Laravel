@@ -7,8 +7,31 @@ body{
 main{
     padding: 1%;
 }
-h1, p{
+.contentImg{
+    text-align: center;
+}
+.bubble{
+    margin: 1%;
     background: rgba(256, 256, 256, 0.6);
     border-radius: 25px;
     text-align: center;
 }
+ 
+.listOfBooks{
+    margin: 2em;
+   /*  color: whitesmoke;
+    font-weight: 700; */
+}
+table{
+    table-layout: auto;
+    padding: 1%;
+}
+/*
+td{
+    border:1px solid whitesmoke;
+    padding: 1%;
+}
+.table{
+    border:2px solid whitesmoke;
+} 
+*/

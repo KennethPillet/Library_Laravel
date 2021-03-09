@@ -16,3 +16,7 @@ h1{
 form label{
     color: whitesmoke;
 }
+.addForm{
+    width: 50%;
+    margin: auto;
+}
