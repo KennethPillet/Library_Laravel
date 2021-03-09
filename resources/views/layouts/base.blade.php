@@ -19,8 +19,11 @@
     <main>
         @yield('content')
     </main>
-    <footer>
-        <p>Kenneth Pillet</p>
-    </footer>
+    <div class="footer_parent">
+        <footer>
+            <p>Kenneth Pillet</p>
+        </footer>
+    
+    </div>
 </body>
 </html>
