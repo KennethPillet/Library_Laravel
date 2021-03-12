@@ -19,7 +19,7 @@ class BooksSeeder extends Seeder
     {
         DB::table('books')->insert([
             [   
-                'author' => Str::random(5),
+                'author_id' => rand(1, 5),
                 'title' => Str::random(10),
                 'description' => Str::random(130),
                 'genre' => 'Policier',
@@ -27,7 +27,7 @@ class BooksSeeder extends Seeder
                 'publication_year' => rand(1900, 2000),
             ],
             [
-                'author' => "Victor Hugo",
+                'author_id' => 1,
                 'title' => "Odes et Ballades",
                 'description' => Str::random(130),
                 'genre' => "Poésie",
@@ -35,7 +35,7 @@ class BooksSeeder extends Seeder
                 'publication_year' => 1826,
             ],
             [
-                'author' => "Vicho",
+                'author_id' => 3,
                 'title' => "Epée de vérité",
                 'description' => Str::random(130),
                 'genre' => "Poésie",

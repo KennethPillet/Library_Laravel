@@ -26,7 +26,7 @@
                         <tr>
                             <th scope="row">{{ $book->id }}</th>
                             <td>{{ $book->title }}</td>
-                            <td>{{ $book->author }}</td>
+                            <td>{{ $book->author->name }}</td>
                             <td>{{ $book->genre }}</td>
                             <td>{{ $book->publication_year }}</td>
                             <td>{{ $book->pages_nb }}</td>

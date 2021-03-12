@@ -20,13 +20,26 @@
                 <div class="form-group row">
                     <label class="col-sm-2 col-form-label" for="author">Auteur</label>
                     <div class=" col-sm-5">
-                        <input type="text" id="author" name="author" value="{{ $book->author }}"class="form-control">
+                        <select class="form-control" name="author_id" id="">
+                            @foreach($authors as $author)
+                                @if ($book->author_id === $author->id)
+                                    <option value="{{ $author->id }}" selected>{{ $author->name }}</option>
+                                @else
+                                    <option value="{{ $author->id }}">{{ $author->name }}</option>
+                                @endif
+                            @endforeach
+                        </select>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-sm-2 col-form-label" for="genre">Genre</label>
+                    <label class="col-sm-2 col-form-label" for="genres">Genres</label>
                     <div class=" col-sm-5">
-                        <input type="text" id="genre" name="genre" value="{{ $book->genre }}"class="form-control">
+                        @foreach($genres as $genre)
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="genres[]" value="{{ $genre->id }}" id="">
+                                <label class="form-check-label" for="genres">{{ $genre->name }}</label>
+                            </div>
+                         @endforeach
                     </div>
                 </div>
                 <div class="form-group row">

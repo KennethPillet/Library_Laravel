@@ -15,7 +15,11 @@
                   <input type="text" class="form-control" id="title" name="title" placeholder="Titre">
                 </div>
                 <div class="col">
-                  <input type="text" class="form-control" id="author" name="author" placeholder="Auteur">
+                  <select class="form-control" name="author_id" id="">
+                    @foreach($authors as $author)
+                        <option value="{{ $author->id }}">{{ $author->name }}</option>
+                    @endforeach
+                  </select>
                 </div>
             </div>
             <br>
@@ -27,7 +31,12 @@
                     <input type="number" class="form-control" id="pages_nb" name="pages_nb" placeholder="Nombre de Pages">
                 </div>
                 <div class="col">
-                  <input type="text" class="form-control" id="genre" name="genre" placeholder="Genre">
+                  @foreach($genres as $genre)
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="genres[]" value="{{ $genre->id }}" id="">
+                      <label class="form-check-label" for="genres">{{ $genre->name }}</label>
+                    </div>
+                  @endforeach
                 </div>
             </div>
             <div class="form-group">

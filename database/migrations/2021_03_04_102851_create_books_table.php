@@ -16,7 +16,8 @@ class CreateBooksTable extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->id();
             $table->string('title',255); // Création d'un champ texte 'titre' de 255 caractères
-            $table->string('author');// Création d'un champ texte 'author'
+            //$table->string('author');// Création d'un champ texte 'author'
+            $table->integer('author_id');//son id
             $table->longText('description'); // Création d'un champ texte long 'contenu'
             $table->string('genre');
             $table->integer('publication_year');

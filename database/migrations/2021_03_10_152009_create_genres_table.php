@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAuthorTable extends Migration
+class CreateGenresTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class CreateAuthorTable extends Migration
      */
     public function up()
     {
-        Schema::create('author', function (Blueprint $table) {
+        Schema::create('genres', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ class CreateAuthorTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('author');
+        Schema::dropIfExists('genres');
     }
 }

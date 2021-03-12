@@ -29,8 +29,12 @@
                     <tr>
                         <th scope="row">{{ $book->id }}</th>
                         <td><a href="/book/{{ $book->id }}">{{ $book->title }}</a></td>
-                        <td>{{ $book->author }}</td>
-                        <td>{{ $book->genre }}</td>
+                        <td>{{ $book->author->name }}</td>
+                        <td>
+                            @foreach($book->genres as $genre)
+                                <p>{{ $genre->name }}</p>
+                            @endforeach
+                        </td>
                         <td>{{ $book->publication_year }}</td>
                         <td><a href="/modifyBook/{{ $book->id }}" class="btn btn-outline-secondary"><i type="submit" class="bi bi-arrow-repeat"></i></a></td>
                         <td>    

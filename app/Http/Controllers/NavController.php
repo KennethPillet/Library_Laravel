@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Book;
+use App\Models\Author;
+use App\Models\Genre;
 
 class NavController extends Controller
 {
@@ -21,11 +23,15 @@ class NavController extends Controller
         return view('book', ['book'=>$book]);
     }
     public function add(){
-        return view('add');
+        $authors = Author::all()->sortBy('name');
+        $genres = Genre::all()->sortBy('name');
+        return view('add', ['authors' => $authors, 'genres' => $genres]);
     }
     public function modifyBook($id){
         //dd($book);
         $book = Book::getOneBook($id);
-        return view('modify', ['book'=> $book]);
+        $authors = Author::all()->sortBy('name');
+        $genres = Genre::all()->sortBy('name');
+        return view('modify', ['book' => $book, 'authors' => $authors, 'genres' => $genres]);
     }
 }
